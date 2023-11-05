@@ -27,7 +27,7 @@ const Testimonial = () => {
       {/* customer review */}
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
         {/* review 1 */}
-        <div className="relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
+        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
           <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
             <img
               src={customer1}
@@ -45,7 +45,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-70 text-[#222222]"
+                    className="w-5 h-5 text-yellow-70 text-[#222222] "
                   >
                     <path
                       fill-rule="evenodd"
@@ -119,7 +119,7 @@ const Testimonial = () => {
           </div>
         </div>
         {/* review 2 */}
-        <div className="relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
+        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
           <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
             <img
               src={customer2}
@@ -211,7 +211,7 @@ const Testimonial = () => {
           </div>
         </div>
         {/* review 3 */}
-        <div className="relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
+        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
           <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
             <img
               src={customer3}

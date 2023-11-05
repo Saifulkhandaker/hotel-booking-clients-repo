@@ -2,6 +2,7 @@ import { GiDoubleStreetLights } from 'react-icons/gi';
 import { PiSwimmingPoolDuotone, PiCallBellLight } from 'react-icons/pi';
 import featured1 from "../assets/images/featured/featured1.jpg"
 import featured2 from "../assets/images/featured/featured2.jpg"
+import smallIcon from "../assets/icons/small icon.png"
 
 const Featured = () => {
     return (
@@ -13,7 +14,10 @@ const Featured = () => {
             </div>
             {/* content section */}
             <div className="space-y-3 md:space-y-8 lg:text-left text-center">
-                <p className="text-[#898989] text-lg md:text-xl font-medium mt-10 md:mt-10 lg:mt-0">H O E X R _ L U X U R Y _ H O T E L</p>
+                <div className='flex gap-3'>
+                <p className="text-[#898989] ml-12 md:ml-48 lg:ml-0 text-lg md:text-xl font-medium mt-10 md:mt-10 lg:mt-0">H O E X R _ L U X U R Y _ H O T E L</p>
+                <img className='h-fit mt-2 lg:block md:hidden hidden' src={smallIcon} alt="" />
+                </div>
                 <h2 className="text-4xl md:text-6xl font-serif">Most Safe & Rated <br /> Hotel in London.</h2>
                 <p className="text-[#898989] text-xl mt-3">One of the finest hotel in London.Where You can Experience the luxuries. So many services so that you can relax and enjoy your best times. Best Hotel Service Provide award winner in 2023.</p>
               <div className='flex items-center justify-between'>

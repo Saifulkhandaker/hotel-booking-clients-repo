@@ -23,7 +23,7 @@ const Footer = () => {
           <header className="footer-title">Information</header>
           <a className="link link-hover">1800-121-3637 <br />+91-7052-101-786</a>
           <a className="link link-hover">info@example.com</a>
-          <a className="link link-hover">1247/Plot No. 39, 15th Phase, <br /> Coxs Bazar, Bangladesh</a>
+          <a className="link link-hover">1247/Plot No. 39, 15th Phase, <br /> London, UK</a>
         </nav>
         <nav className="md:ml-0 lg:ml-0 ml-5">
           <header className="footer-title">Legal</header>

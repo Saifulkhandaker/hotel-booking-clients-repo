@@ -17,7 +17,7 @@ const Imagery = () => {
             src={smallIcon}
             alt=""
           />
-          <p className="text-[#898989] ml-1 lg:ml-0 text-sm md:text-xl font-medium mt-16 lg:mt-0">
+          <p className="text-[#898989] ml-1 lg:ml-0 text-sm md:text-xl font-medium lg:mt-0">
             H O E X R _ L U X U R Y _ R O O M S
           </p>
           <img

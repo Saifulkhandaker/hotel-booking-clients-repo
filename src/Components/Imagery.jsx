@@ -4,6 +4,7 @@ import room3 from "../assets/images/rooms/room-3.jpg";
 import room4 from "../assets/images/rooms/room-4.jpg";
 import room5 from "../assets/images/rooms/room-5.jpg";
 import smallIcon from "../assets/icons/small icon.png";
+import { Link } from "react-router-dom";
 
 const Imagery = () => {
   return (
@@ -36,12 +37,18 @@ const Imagery = () => {
             <img className=" transform scale-100 group-hover:scale-110 transition-transform duration-300" src={room1} alt="" />
             <div className="absolute inset-0 flex items-end justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-lg bg-opacity-75 p-2">Junior Suit <br /> 150$/night</p>
+                <Link to='/rooms'>
+                <button className="text-white mb-3 self-end text-sm border bg-none bg-opacity-75 p-2">More Rooms</button>
+                </Link>
             </div>
             </div>
             <div className="group relative">
             <img className=" transform scale-100 group-hover:scale-110 transition-transform duration-100" src={room2} alt="" />
             <div className="absolute inset-0 flex items-end justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-lg bg-opacity-75 p-2">Family Room <br /> 200$/night</p>
+                <Link to='/rooms'>
+                <button className="text-white mb-3 self-end text-sm border bg-none bg-opacity-75 p-2">More Rooms</button>
+                </Link>
             </div>
             </div>
         </div>
@@ -51,18 +58,27 @@ const Imagery = () => {
             <img className="ml-16 md:ml-52 lg:ml-0  transform scale-100 group-hover:scale-110 transition-transform duration-100" src={room3} alt="" />
             <div className="absolute inset-0 flex items-end justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-lg bg-opacity-75 p-2">Double Room <br /> 250$/night</p>
+                <Link to='/rooms'>
+                <button className="text-white mb-3 self-end text-sm border bg-none bg-opacity-75 p-2">More Rooms</button>
+                </Link>
             </div>
             </div>
             <div className="group relative">
             <img className="md:ml-16 lg:ml-0 transform scale-100 group-hover:scale-110 transition-transform duration-100" src={room4} alt="" />
             <div className="absolute inset-0 flex items-end justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-lg bg-opacity-75 p-2">Double Room <br /> 250$/night</p>
+                <Link to='/rooms'>
+                <button className="text-white mb-3 self-end text-sm border bg-none bg-opacity-75 p-2">More Rooms</button>
+                </Link>
             </div>
             </div>
             <div className="group relative">
             <img className="ml-16 md:ml-52 lg:ml-0 transform scale-100 group-hover:scale-110 transition-transform duration-100" src={room5} alt="" />
             <div className="absolute inset-0 flex items-end justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-lg bg-opacity-75 p-2">Deluxe Room <br /> 300$/night</p>
+                <Link to='/rooms'>
+                <button className="text-white mb-3 self-end text-sm border bg-none bg-opacity-75 p-2">More Rooms</button>
+                </Link>
             </div>
             </div>
         </div>

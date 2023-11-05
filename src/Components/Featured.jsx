@@ -10,12 +10,12 @@ const Featured = () => {
             {/* img section */}
             <div className="relative ml-0 lg:ml-0 md:ml-28">
             <img src={featured1} alt="" />
-            <img className="absolute -bottom-5 border-8 border-white right-10 md:left-20 lg:right-8" src={featured2} alt="" />
+            <img className="absolute -bottom-10 border-8 border-white right-10 md:left-20 lg:left-64" src={featured2} alt="" />
             </div>
             {/* content section */}
             <div className="space-y-3 md:space-y-8 lg:text-left text-center">
                 <div className='flex gap-3'>
-                <p className="text-[#898989] ml-12 md:ml-48 lg:ml-0 text-lg md:text-xl font-medium mt-10 md:mt-10 lg:mt-0">H O E X R _ L U X U R Y _ H O T E L</p>
+                <p className="text-[#898989] ml-20 md:ml-48 lg:ml-0 text-sm md:text-xl font-medium mt-16 lg:mt-0">H O E X R _ L U X U R Y _ H O T E L</p>
                 <img className='h-fit mt-2 lg:block md:hidden hidden' src={smallIcon} alt="" />
                 </div>
                 <h2 className="text-4xl md:text-6xl font-serif">Most Safe & Rated <br /> Hotel in London.</h2>

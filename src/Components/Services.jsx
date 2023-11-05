@@ -10,7 +10,7 @@ import { BiCar } from "react-icons/bi";
 
 const Services = () => {
   return (
-    <div className="w-11/12 mx-auto mt-5 mb-8 ">
+    <div className="w-11/12 mx-auto mt-5 mb-8">
       <div className="mb-8">
         {/* text section */}
         <div className="text-center ">

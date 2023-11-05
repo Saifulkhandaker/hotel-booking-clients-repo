@@ -6,7 +6,8 @@ import smallIcon from "../assets/icons/small icon.png"
 
 const Featured = () => {
     return (
-        <div className="mt-10 mb-10 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 justify-center items-center">
+        <div className='w-11/12 mx-auto'>
+            <div className="mt-10 mb-10 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 justify-center items-center">
             {/* img section */}
             <div className="relative ml-0 lg:ml-0 md:ml-28">
             <img src={featured1} alt="" />
@@ -42,6 +43,7 @@ const Featured = () => {
               </div>
              </div>
             </div>
+        </div>
         </div>
     );
 };

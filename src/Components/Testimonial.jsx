@@ -45,7 +45,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -58,7 +58,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -71,7 +71,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -84,7 +84,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -97,7 +97,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -137,7 +137,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -150,7 +150,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -163,7 +163,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -176,7 +176,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -189,7 +189,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-yellow-70 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -229,7 +229,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -242,7 +242,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -255,7 +255,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -268,7 +268,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"
@@ -281,7 +281,7 @@ const Testimonial = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    className="w-5 h-5 text-yellow-700"
+                    className="w-5 h-5 text-[#222222]"
                   >
                     <path
                       fill-rule="evenodd"

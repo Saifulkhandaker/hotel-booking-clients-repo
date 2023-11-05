@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* animation css */
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 50px));
+  }
+}
+
+.animate-carousel img {
+  margin-right: 15px;
+  width: calc(100% - 50px);
+}
+
+.animate-carousel {
+  display: flex;
+  animation: carousel 20s linear infinite;
+}

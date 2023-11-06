@@ -1,9 +1,13 @@
-import React from 'react';
+
+import RoomsBg from "../../Components/RoomsBg";
 
 const Rooms = () => {
     return (
         <div>
-            this is room
+            {/* room bg */}
+           <div>
+               <RoomsBg></RoomsBg>
+           </div>
         </div>
     );
 };

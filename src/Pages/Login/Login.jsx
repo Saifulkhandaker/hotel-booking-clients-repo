@@ -6,14 +6,17 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import 'sweetalert2/src/sweetalert2.scss'
-
-
-
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 
 
 const Login = () => {
-  const {googleSignIn}= useContext(AuthContext);
+  const {googleSignIn, signIn}= useContext(AuthContext);
+  const location = useLocation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError]= useState(''); 
 
 
   const navigate = useNavigate()
@@ -33,13 +36,23 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        const form = e.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        const user = {email, password}
-        console.log(user);
-    }
-
+        if((email, password)){
+          signIn(email, password)
+          .then(result => {
+            setError('');
+            Swal.fire({
+              title: 'Success!',text: 'Successfully logged in',icon: 'success',confirmButtonText: 'Cool' });
+              setTimeout(() => {
+                navigate(location?.state ? location.state : '/');
+              }, 3000);
+          })
+          .catch((err) => {
+            setError('Invalid email or password');
+            Swal.fire({
+              title: 'Error!',text: 'Invalid email or password',icon: 'error',confirmButtonText: 'Error' });
+          })
+        }  
+     }
 
 
     return (
@@ -61,6 +74,7 @@ const Login = () => {
                         <span className="label-text">Email</span>
                       </label>
                       <input
+                      onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         name="email"
                         placeholder="email"
@@ -73,6 +87,7 @@ const Login = () => {
                         <span className="label-text">Password</span>
                       </label>
                       <input
+                      onChange={(e) => setPassword(e.target.value)}
                         type="password"
                         name="password"
                         placeholder="password"

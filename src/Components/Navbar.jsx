@@ -52,7 +52,7 @@ const Navbar = () => {
       </Link>
       :
       <Link to="/login" >
-        <button className="btn">LogIn</button>
+        <button className="btn bg-transparent border-none hover:bg-[#C8B090] rounded-sm text-white">LogIn</button>
       </Link>
     }
   </div>

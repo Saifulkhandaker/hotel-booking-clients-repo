@@ -8,6 +8,8 @@ import { MdOutlineDinnerDining } from "react-icons/md";
 import { BiCar } from "react-icons/bi";
 import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 
@@ -17,43 +19,56 @@ const ViewDetails = () => {
   const {room_title,banner_img,img1,img2,price,description,status,size} = room;
 
   const navigate = useNavigate()
+  const { user } = useContext(AuthContext);
+  const isUserLoggedIn = user !== null;
 
 
 //handle Room book button
 const handleRoomBook = e => {
     e.preventDefault();
 
-    const form = e.target;
-    const room_name = form.room_title.value;
-    const price = form.price.value;
-    const check_in = form.check_in.value;
-    const check_out = form.check_out.value;
-    const img = banner_img;
-    const booking = {room_name, price, check_in, check_out, img};
-    // console.log(booking);
+    if (isUserLoggedIn) {
+      const form = e.target;
+      const room_name = form.room_title.value;
+      const price = form.price.value;
+      const check_in = form.check_in.value;
+      const check_out = form.check_out.value;
+      const img = banner_img;
+      const booking = { room_name, price, check_in, check_out, img };
 
-    fetch('http://localhost:5000/bookings', {
+      fetch('http://localhost:5000/bookings', {
         method: 'POST',
         headers: {
-            'content-type': 'application/json'
+          'content-type': 'application/json',
         },
-        body: JSON.stringify(booking)
-    })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-        if(data.insertedId){
+        body: JSON.stringify(booking),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.insertedId) {
             Swal.fire({
-                title: 'Sucess',
-                text: 'Room Booked Successfully',
-                icon: 'success',
-                confirmButtonText: 'Cool'
-              });
-              setTimeout(() => {
-                navigate('/rooms')
-              }, 3000)
-        }
-    })
+              title: 'Success',
+              text: 'Room Booked Successfully',
+              icon: 'success',
+              confirmButtonText: 'Cool',
+            });
+            setTimeout(() => {
+              navigate('/rooms');
+            }, 3000);
+          }
+        });
+    } else {
+      Swal.fire({
+        title: 'Please log in',
+        text: 'You need to be logged in to book a room.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+      });
+      setTimeout(() => {
+        navigate('/login');
+      }, 3000);
+    }
 }
 
 

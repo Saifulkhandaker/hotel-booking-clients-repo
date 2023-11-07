@@ -20,6 +20,7 @@ const ViewDetails = () => {
 
   const navigate = useNavigate()
   const { user } = useContext(AuthContext);
+  console.log(user.email);
   const isUserLoggedIn = user !== null;
 
 
@@ -31,10 +32,11 @@ const handleRoomBook = e => {
       const form = e.target;
       const room_name = form.room_title.value;
       const price = form.price.value;
+      const email = form.email.value;
       const check_in = form.check_in.value;
       const check_out = form.check_out.value;
       const img = banner_img;
-      const booking = { room_name, price, check_in, check_out, img };
+      const booking = { room_name, price, check_in, check_out, img, email };
 
       fetch('http://localhost:5000/bookings', {
         method: 'POST',
@@ -180,6 +182,14 @@ const handleRoomBook = e => {
           </label>
           <input name="price" type="text" value={`${price}$`} className="input input-bordered rounded-none text-lg text-[#AA8453]" readOnly />
         </div>
+        {/*  */}
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text clear-left text-lg font-normal">Your Email</span>
+          </label>
+          <input name="email" type="text" value={user.email} className="input input-bordered rounded-none text-lg text-[#AA8453]" readOnly />
+        </div>
+        {/*  */}
         <div className="form-control">
           <label className="label">
             <span className="label-text clear-left text-lg font-normal">Check In</span>

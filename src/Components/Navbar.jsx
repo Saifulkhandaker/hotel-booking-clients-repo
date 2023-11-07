@@ -35,7 +35,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
     <Link to="/login">
-    <button className="btn bg-[#C8B090] border-none rounded-sm text-white">Login</button>
+    <button className="btn bg-transparent border-none hover:bg-[#C8B090] rounded-sm text-white">Login</button>
     </Link>
   </div>
 </div>

@@ -24,8 +24,8 @@ const Register = () => {
           <img className="h-[80vh] mt-5 mb-5 ml-10 md:mb-0 md:ml-0" src={img} alt="" />
         </div>
         <div>
-          <div className="hero border border-[#AA8453]  ">
-            <div className="hero-content flex-col border py-3 px-5">
+          <div className="hero">
+            <div className="hero-content flex-col border border-[#AA8453]  py-3 px-5">
               <div className="text-center lg:text-left">
                 <h1 className="text-5xl font-bold text-[#AA8453]">Register</h1>
               </div>

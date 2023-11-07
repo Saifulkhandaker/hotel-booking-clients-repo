@@ -22,8 +22,8 @@ const Login = () => {
             <img className="h-[60vh] mt-5 ml-20 mb-5 md:mb-0  md:ml-0" src={img} alt="" />
           </div>
           <div>
-            <div className="hero border border-[#AA8453] ">
-              <div className="hero-content flex-col border py-3 px-5">
+            <div className="hero ">
+              <div className="hero-content flex-col border border-[#AA8453] py-3 px-5">
                 <div className="text-center lg:text-left">
                   <h1 className="text-5xl font-bold text-[#AA8453]">Login</h1>
                 </div>

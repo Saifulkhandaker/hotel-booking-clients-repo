@@ -1,8 +1,34 @@
 import { Link } from "react-router-dom";
 import { BsGoogle } from 'react-icons/bs';
 import img from "../../assets/icons/login.svg"
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import 'sweetalert2/src/sweetalert2.scss'
+
+
+
+
+
 
 const Login = () => {
+  const {googleSignIn}= useContext(AuthContext);
+
+
+  const navigate = useNavigate()
+
+  // handle google sign in
+  const handleGoogle = () => {
+    googleSignIn()
+    .then(result => {
+      Swal.fire({
+        title: 'Success!',text: 'Successfully logged in',icon: 'success',confirmButtonText: 'Cool' });
+        setTimeout(() => {
+          navigate('/');
+        }, 3000);
+    })
+  }
 
 
     const handleLogin = (e) => {
@@ -62,7 +88,7 @@ const Login = () => {
                     <div className="form-control mt-6">
                       <button className="btn text-white bg-[#AA8453]">Login</button>
                       <p>or sign with <br />
-                        <button className="btn w-full text-white bg-[#AA8453]" ><BsGoogle></BsGoogle>Google</button>
+                        <button onClick={handleGoogle} className="btn w-full text-white bg-[#AA8453]" ><BsGoogle></BsGoogle>Google</button>
                       </p>
                     </div>
                   </form>

@@ -1,5 +1,11 @@
-const BookingTable = ({ booking, handleDelete }) => {
+const BookingTable = ({ booking, handleDelete, handleUpdate }) => {
   const { _id, room_name, check_in, check_out, img } = booking;
+
+  const handleClose = () => {
+    const modal = document.getElementById('my_modal_1');
+    modal.close();
+  };
+  
 
   return (
     <tr>
@@ -36,7 +42,30 @@ const BookingTable = ({ booking, handleDelete }) => {
       <td>{check_in}</td>
       <td>{check_out}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+        {/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>Update</button>
+<dialog id="my_modal_1" className="modal">
+  <div className="modal-box">
+    <div className="h-full text-center space-y-5">
+      <form onSubmit={(e) => handleUpdate(_id, e)} className="">
+      <div className="form-control">
+          <label className="label">
+            <span className="label-text clear-left text-lg font-normal">Check In</span>
+          </label>
+          <input name="check_in" type="date" placeholder="Arrive Date" className="input input-bordered rounded-none" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text clear-left text-lg font-normal">Check Out</span>
+          </label>
+          <input name="check_out" type="date" placeholder="Departure Date" className="input input-bordered rounded-none" required />
+        </div>
+        <button className="btn mt-5 border border-black hover:bg-[#AA8453] hover:text-white ">Update</button>
+        <button onClick={handleClose} className="btn mt-5 ml-5 px-5 border border-black hover:bg-[#AA8453] hover:text-white ">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
       </th>
     </tr>
   );

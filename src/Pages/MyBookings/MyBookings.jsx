@@ -53,6 +53,40 @@ const MyBookings = () => {
     });
   };
 
+  // handle update
+  const handleUpdate = (id, e)=> {
+    e.preventDefault();
+    const form = e.target;
+    const check_in = form.check_in.value;
+    const check_out = form.check_out.value;
+    const updateDate = { check_in, check_out }
+    console.log(updateDate);
+    // send data to the server
+    fetch(`http://localhost:5000/bookings/${id}`, {
+      method: "PUT",
+      headers: {
+        'content-type': "application/json",
+      },
+      body: JSON.stringify(updateDate)
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      if (data.modifiedCount > 0) {
+        Swal.fire({
+          title: "Success!",
+          text: "Date Updated Successfully",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
+        const remaining = bookings.filter(booking => booking._id !== id);
+        const updated = bookings.find(booking => booking._id === id);
+        const newBookings = [updated, ...remaining];
+        setBookings(newBookings);
+      }
+    });
+  }
+
   return (
     <div>
       <div className="relative">
@@ -91,6 +125,7 @@ const MyBookings = () => {
                   key={booking._id}
                   booking={booking}
                   handleDelete={handleDelete}
+                  handleUpdate={handleUpdate}
                 ></BookingTable>
               ))}
             </tbody>

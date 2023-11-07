@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const RoomsCard = ({ room }) => {
-  const { room_title, banner_img, price } = room;
+  const {_id, room_title, banner_img, price } = room;
 
   return (
     <div className="group relative h-full w-full border-2 border-[#f1d0a6a6] px-4 py-3">
@@ -14,7 +14,7 @@ const RoomsCard = ({ room }) => {
     <p className="text-white text-2xl font-medium bg-opacity-75 p-2 text-center">
       {room_title} <br /> <span className="text-xl font-normal">{price}$/night</span>
     </p>
-    <Link to="/rooms">
+    <Link to={`/viewDetails/${_id}`}>
       <button className="text-white mb-3 text-sm md:text-lg border bg-opacity-75 p-2 px-4">
         View Details
       </button>

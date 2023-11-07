@@ -7,6 +7,7 @@ import ErrorPage from '../Pages/ErrorPage';
 import ViewDetails from '../Components/ViewDetails';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import PrivateRoute from './PrivateRoute';
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -24,7 +25,9 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path:'/myBookings',
-                element: <MyBookings></MyBookings>
+                element: <PrivateRoute>
+                    <MyBookings></MyBookings>
+                </PrivateRoute>
             },
             {
                 path: '/viewDetails/:id',

@@ -6,6 +6,8 @@ import {LiaBedSolid, LiaWifiSolid, LiaSwimmingPoolSolid} from "react-icons/lia";
 import { TbWorldShare } from "react-icons/tb";
 import { MdOutlineDinnerDining } from "react-icons/md";
 import { BiCar } from "react-icons/bi";
+import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -13,6 +15,49 @@ import { BiCar } from "react-icons/bi";
 const ViewDetails = () => {
   const room = useLoaderData();
   const {room_title,banner_img,img1,img2,price,description,status,size} = room;
+
+  const navigate = useNavigate()
+
+
+//handle Room book button
+const handleRoomBook = e => {
+    e.preventDefault();
+
+    const form = e.target;
+    const room_name = form.room_title.value;
+    const price = form.price.value;
+    const check_in = form.check_in.value;
+    const check_out = form.check_out.value;
+    const img = banner_img;
+    const booking = {room_name, price, check_in, check_out, img};
+    // console.log(booking);
+
+    fetch('http://localhost:5000/bookings', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(booking)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        if(data.insertedId){
+            Swal.fire({
+                title: 'Sucess',
+                text: 'Room Booked Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              });
+              setTimeout(() => {
+                navigate('/rooms')
+              }, 3000)
+        }
+    })
+}
+
+
+
   return (
     <div>
   {/* rooms bg and title */}
@@ -37,7 +82,7 @@ const ViewDetails = () => {
             {/* images */}
         <div>
          <img className="w-full" src={banner_img} alt="" />
-          <div className="flex gap-[6px] md:gap-16 lg:gap-1 mt-2">
+          <div className="flex gap-[6px] md:gap-16 lg:gap-[2px] mt-2">
             <img className="w-48 lg:w-fit h-fit" src={img1} alt="" />
             <img className="w-48 lg:w-fit h-fit" src={img2} alt="" />
             <img className="w-48 lg:w-fit h-fit hidden md:block" src={img1} alt="" />
@@ -105,8 +150,40 @@ const ViewDetails = () => {
 
         </div>
     </div>
-   </div>
- </div>
+    {/* form submit side */}
+    <div>
+      <form onSubmit={handleRoomBook} className="card-body bg-[#F5F6F7] border  rounded-lg py-20 px-10 space-y-5">
+      <div className="form-control">
+          <label className="label">
+            <span className="label-text clear-left text-lg font-normal">Room Name</span>
+          </label>
+          <input name="room_title" type="text" value={room_title} className="input input-bordered rounded-none text-lg text-[#AA8453]" readOnly />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text clear-left text-lg font-normal">Price/night</span>
+          </label>
+          <input name="price" type="text" value={`${price}$`} className="input input-bordered rounded-none text-lg text-[#AA8453]" readOnly />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text clear-left text-lg font-normal">Check In</span>
+          </label>
+          <input name="check_in" type="date" placeholder="Arrive Date" className="input input-bordered rounded-none" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text clear-left text-lg font-normal">Check Out</span>
+          </label>
+          <input name="check_out" type="date" placeholder="Departure Date" className="input input-bordered rounded-none" required />
+        </div>
+        <div className="form-control mt-6">
+          <input className="mt-5 btn rounded-none border-[#AA8453] bg-[#F5F6F7] text-[#AA8453] hover:bg-[#AA8453] hover:text-white" type="submit" value="BOOK NOW" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 </div>
 
   );

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BsGoogle } from 'react-icons/bs';
 import img from "../../assets/icons/login.svg"
 
 const Login = () => {
@@ -61,7 +62,7 @@ const Login = () => {
                     <div className="form-control mt-6">
                       <button className="btn text-white bg-[#AA8453]">Login</button>
                       <p>or sign with <br />
-                        <button className="btn w-full text-white bg-[#AA8453]" >Google</button>
+                        <button className="btn w-full text-white bg-[#AA8453]" ><BsGoogle></BsGoogle>Google</button>
                       </p>
                     </div>
                   </form>

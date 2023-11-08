@@ -11,7 +11,7 @@ const MyBookings = () => {
   const { user } = useContext(AuthContext);
   const [bookings, setBookings] = useState([]);
 
-  const url = `https://hotel-booking-server-6hz2x0ygm.vercel.app/bookings?email=${user?.email}`;
+  const url = `https://hotel-booking-server-seven.vercel.app/bookings?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -30,12 +30,9 @@ const MyBookings = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://hotel-booking-server-6hz2x0ygm.vercel.app/bookings/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`https://hotel-booking-server-seven.vercel.app/bookings/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -65,7 +62,7 @@ const MyBookings = () => {
     const updateDate = { check_in, check_out };
     console.log(updateDate);
     // send data to the server
-    fetch(`https://hotel-booking-server-6hz2x0ygm.vercel.app/bookings/${id}`, {
+    fetch(`https://hotel-booking-server-seven.vercel.app/bookings/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

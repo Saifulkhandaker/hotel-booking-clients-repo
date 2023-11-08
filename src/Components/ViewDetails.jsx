@@ -47,7 +47,7 @@ const ViewDetails = () => {
       const img = banner_img;
       const booking = { room_name, price, check_in, check_out, img, email };
 
-      fetch("https://hotel-booking-server-6hz2x0ygm.vercel.app/bookings", {
+      fetch("https://hotel-booking-server-seven.vercel.app/bookings", {
         method: "POST",
         headers: {
           "content-type": "application/json",

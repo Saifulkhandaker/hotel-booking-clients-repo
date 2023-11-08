@@ -8,6 +8,7 @@ import ViewDetails from '../Components/ViewDetails';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import PrivateRoute from './PrivateRoute';
+import AboutUs from '../Pages/AboutUs/AboutUs';
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const myCreatedRoute = createBrowserRouter([
                 element: <Rooms></Rooms>
             },
             {
+                path: '/aboutUs',
+                element: <AboutUs></AboutUs>
+            },
+            {
                 path:'/myBookings',
                 element: <PrivateRoute>
                     <MyBookings></MyBookings>
@@ -31,7 +36,9 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/viewDetails/:id',
-                element: <ViewDetails></ViewDetails>,
+                element: <PrivateRoute>
+                    <ViewDetails></ViewDetails>
+                </PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/rooms/${params.id}`)
             },
             {

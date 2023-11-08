@@ -20,7 +20,8 @@ const Navbar = () => {
     const navlinks = <>
     <li className="text-lg font-medium"> <NavLink to="/">Home</NavLink></li>
     <li className="text-lg font-medium"> <NavLink to="/rooms">Rooms</NavLink></li>
-    <li className="text-lg font-medium"> <NavLink to="/myBookings">My Bookings</NavLink></li>   
+    <li className="text-lg font-medium"> <NavLink to="/myBookings">My Bookings</NavLink></li>    
+    <li className="text-lg font-medium"> <NavLink to="/aboutUs">About Us</NavLink></li>   
     </>
 
     return (

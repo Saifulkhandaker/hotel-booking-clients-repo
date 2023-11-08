@@ -1,8 +1,15 @@
-# React + Vite
+# Project : Hoexr_Hotel_Booking
+# Live : 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Features :
 
-Currently, two official plugins are available:
+- User-Friendly Interface: This website has an intuitive and user-friendly interface that allows visitors to easily browse available rooms, view details, and make bookings. Implement a clear and well-organized layout with a simple navigation menu.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Customizable Room Layout: Users have the flexibility to display different rooms in customizable cards, allowing them to arrange and view content as they prefer.
+
+- Detailed Room Information: Offer comprehensive room descriptions, high-quality images, and essential details like pricing, amenities, and availability. This helps potential guests make informed decisions when choosing a room.
+
+- Room Booking Functionality: User can remove the booking room  from the my booking page if user want.And the user can also update the booking date
+
+- Responsive Design: This website is responsive across all devices for seamless browsing and shopping.
+

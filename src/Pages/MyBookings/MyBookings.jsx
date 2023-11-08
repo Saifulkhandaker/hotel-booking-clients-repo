@@ -11,7 +11,7 @@ const MyBookings = () => {
   const { user } = useContext(AuthContext);
   const [bookings, setBookings] = useState([]);
 
-  const url = `http://localhost:5000/bookings?email=${user?.email}`;
+  const url = `https://hotel-booking-server-6hz2x0ygm.vercel.app/bookings?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -30,9 +30,12 @@ const MyBookings = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/bookings/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://hotel-booking-server-6hz2x0ygm.vercel.app/bookings/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -54,38 +57,38 @@ const MyBookings = () => {
   };
 
   // handle update
-  const handleUpdate = (id, e)=> {
+  const handleUpdate = (id, e) => {
     e.preventDefault();
     const form = e.target;
     const check_in = form.check_in.value;
     const check_out = form.check_out.value;
-    const updateDate = { check_in, check_out }
+    const updateDate = { check_in, check_out };
     console.log(updateDate);
     // send data to the server
-    fetch(`http://localhost:5000/bookings/${id}`, {
+    fetch(`https://hotel-booking-server-6hz2x0ygm.vercel.app/bookings/${id}`, {
       method: "PUT",
       headers: {
-        'content-type': "application/json",
+        "content-type": "application/json",
       },
-      body: JSON.stringify(updateDate)
+      body: JSON.stringify(updateDate),
     })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      if (data.modifiedCount > 0) {
-        Swal.fire({
-          title: "Success!",
-          text: "Date Updated Successfully",
-          icon: "success",
-          confirmButtonText: "Cool",
-        });
-        const remaining = bookings.filter(booking => booking._id !== id);
-        const updated = bookings.find(booking => booking._id === id);
-        const newBookings = [updated, ...remaining];
-        setBookings(newBookings);
-      }
-    });
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Date Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+          const remaining = bookings.filter((booking) => booking._id !== id);
+          const updated = bookings.find((booking) => booking._id === id);
+          const newBookings = [updated, ...remaining];
+          setBookings(newBookings);
+        }
+      });
+  };
 
   return (
     <div>

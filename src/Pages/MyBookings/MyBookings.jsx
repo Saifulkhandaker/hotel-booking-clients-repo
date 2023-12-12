@@ -89,7 +89,7 @@ const MyBookings = () => {
 
   return (
     <div>
-      <div className="relative">
+      <div className="relative" data-aos="fade-top" data-aos-duration="2000">
         <img className="md:h-[70vh] w-full" src={roomBg} alt="" />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-3xl font-serif text-white">
           B O O K E D _ R O O M S <br />

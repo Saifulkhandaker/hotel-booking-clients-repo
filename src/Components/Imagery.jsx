@@ -11,7 +11,7 @@ const Imagery = () => {
     <div className="bg-[#f7eee25b] lg:mt-20 mb-10">
       <div className="w-11/12 mx-auto lg:py-10">
         {/* text section */}
-        <div className="text-center ">
+        <div className="text-center " data-aos="fade-down" data-aos-duration="2000">
           <div className="flex gap-3 justify-center">
             <img
               className="h-fit mt-2 lg:block md:hidden hidden"
@@ -34,7 +34,7 @@ const Imagery = () => {
         {/* room photos */}
         <div className="mt-10">
           {/* 1st row photos */}
-          <div className="grid grid-cols-1 lg:flex justify-center gap-5 mt-5  ml-0 md:ml-16 lg:ml-0">
+          <div className="grid grid-cols-1 lg:flex justify-center gap-5 mt-5  ml-0 md:ml-16 lg:ml-0" data-aos="fade-right" data-aos-duration="2000">
             <div className="group relative">
               <img
                 className=" transform scale-100 group-hover:scale-110 transition-transform duration-300"
@@ -71,7 +71,7 @@ const Imagery = () => {
             </div>
           </div>
           {/* 2nd row photos */}
-          <div className="grid grid-cols-1 lg:flex justify-center gap-5 mt-5">
+          <div className="grid grid-cols-1 lg:flex justify-center gap-5 mt-5" data-aos="fade-left" data-aos-duration="2000">
             <div className="group relative">
               <img
                 className="ml-16 md:ml-52 lg:ml-0  transform scale-100 group-hover:scale-110 transition-transform duration-100"

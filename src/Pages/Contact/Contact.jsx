@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <div>
       {/* room bg */}
-      <div className="relative">
+      <div className="relative" data-aos="fade-top" data-aos-duration="2000">
         <img className="md:h-[70vh] w-full" src={roomBg} alt="" />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-4xl font-serif text-white">
           C O N T A C T _ U S <br />
@@ -43,7 +43,7 @@ const Contact = () => {
       {/* contact */}
       <div className="w-11/12 mx-auto md:mt-32 mb-20 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-16 ">
         {/* form */}
-        <div className="col-span-2 space-y-3">
+        <div className="col-span-2 space-y-3" data-aos="zoom-in-right" data-aos-duration="2000">
           <div className="flex gap-3">
             <p className="text-[#898989] lg:ml-0 text-sm md:text-xl font-medium mt-8 lg:mt-0">
               S E N D _ U S _ E M A I L
@@ -104,7 +104,7 @@ const Contact = () => {
           </form>
         </div>
         {/* content */}
-        <div className="space-y-3">
+        <div className="space-y-3" data-aos="zoom-in-left" data-aos-duration="2000">
           <div className="flex gap-3">
             <p className="text-[#898989] lg:ml-0 text-sm md:text-xl font-medium mt-8 lg:mt-0">
               N E E D _ A N Y _ H E L P
@@ -140,7 +140,7 @@ const Contact = () => {
         </div>
       </div>
       {/* map */}
-      <div className="w-11/12 mx-auto mb-16 border-2 border-[#AA8453]">
+      <div className="w-11/12 mx-auto mb-16 border-2 border-[#AA8453]" data-aos="zoom-in" data-aos-duration="2000">
           <iframe className="w-full h-[300px] md:h-[400px] "
               src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6726.337103163644!2d-0.06860155763503091!3d51.40018012533551!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1702371046901!5m2!1sen!2sbd"
               style={{ border: 0 }}

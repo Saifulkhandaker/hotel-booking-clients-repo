@@ -8,7 +8,7 @@ const Testimonial = () => {
     <div className="mt-5 bg-[#e9dcbab4]">
       <div className="mb-8">
         {/* text section */}
-        <div className="text-center ">
+        <div className="text-center " data-aos="fade-up" data-aos-duration="2000">
           <div className="flex gap-3 justify-center pt-10">
             <p className="text-[#898989] ml-1 lg:ml-0 text-sm md:text-xl font-medium mt-16 lg:mt-0">
               W H A T _ S A Y S _ F O R _ C U S T O M E R S
@@ -27,7 +27,7 @@ const Testimonial = () => {
       {/* customer review */}
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
         {/* review 1 */}
-        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
+        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none " data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
           <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
             <img
               src={customer1}
@@ -119,7 +119,7 @@ const Testimonial = () => {
           </div>
         </div>
         {/* review 2 */}
-        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
+        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none " data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
           <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
             <img
               src={customer2}
@@ -211,7 +211,7 @@ const Testimonial = () => {
           </div>
         </div>
         {/* review 3 */}
-        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
+        <div className="hover:bg-[#898989] hover:text-white relative border border-[#898989] mb-5 px-2 py-3 flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none " data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
           <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
             <img
               src={customer3}

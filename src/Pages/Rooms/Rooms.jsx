@@ -16,10 +16,10 @@ const Rooms = () => {
   return (
     <div>
       {/* room bg */}
-      <div>
+      <div data-aos="fade-top" data-aos-duration="2000">
         <RoomsBg></RoomsBg>
       </div>
-      <div className="flex gap-3 justify-center mt-10">
+      <div className="flex gap-3 justify-center mt-10" data-aos="fade-up" data-aos-duration="2000">
         <img
           className="h-fit mt-2 lg:block md:hidden hidden"
           src={smallIcon}
@@ -36,7 +36,7 @@ const Rooms = () => {
       </div>
 
       {/* rooms images */}
-      <div className="mt-8 mb-10 w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="mt-8 mb-10 w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4" >
         {rooms.map((room) => (
           <RoomsCard key={room._id} room={room}></RoomsCard>
         ))}

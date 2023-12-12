@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="pt-10 bg-[#0B0604] text-white">
       <footer className="footer">
-        <aside className="md:ml-2 lg:ml-4 ml-5">
+        <aside className="md:ml-2 lg:ml-4 ml-5" data-aos="zoom-out-up" data-aos-duration="2000">
           <img src={logo} alt="" />
           <p className="text-sm lg:text-lg mt-5">
             Welcome to the best five-star deluxe hotel in New <br />
@@ -12,20 +12,20 @@ const Footer = () => {
             aliquam justo in sapien rutrum volutpat.
           </p>
         </aside>
-        <nav className="md:ml-0 lg:ml-0 ml-5">
+        <nav className="md:ml-0 lg:ml-0 ml-5" data-aos="zoom-out-up" data-aos-duration="2000">
           <header className="footer-title">Services</header>
           <a className="link link-hover">Home</a>
           <a className="link link-hover">Rooms & Suits</a>
           <a className="link link-hover">About Hotel</a>
           <a className="link link-hover">Contact</a>
         </nav>
-        <nav className="md:ml-0 lg:ml-0 ml-5">
+        <nav className="md:ml-0 lg:ml-0 ml-5" data-aos="zoom-out-up" data-aos-duration="2000">
           <header className="footer-title">Information</header>
           <a className="link link-hover">1800-121-3637 <br />+91-7052-101-786</a>
           <a className="link link-hover">info@example.com</a>
           <a className="link link-hover">1247/Plot No. 39, 15th Phase, <br /> London, UK</a>
         </nav>
-        <nav className="md:ml-0 lg:ml-0 ml-5">
+        <nav className="md:ml-0 lg:ml-0 ml-5" data-aos="zoom-out-up" data-aos-duration="2000">
           <header className="footer-title">Legal</header>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>

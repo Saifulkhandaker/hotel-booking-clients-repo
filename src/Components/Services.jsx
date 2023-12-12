@@ -13,7 +13,7 @@ const Services = () => {
     <div className="w-11/12 mx-auto mt-5 mb-8">
       <div className="mb-8">
         {/* text section */}
-        <div className="text-center ">
+        <div className="text-center " data-aos="fade-down" data-aos-duration="2000">
           <div className="flex gap-3 justify-center">
             <img
               className="h-fit mt-2 lg:block md:hidden hidden"
@@ -37,7 +37,7 @@ const Services = () => {
       {/* service section */}
       <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {/* 1st */}
-        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white">
+        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white" data-aos="fade-up" data-aos-duration="2000">
           <p className="text-[#aa8453] text-6xl">
             <LiaBedSolid></LiaBedSolid>
           </p>
@@ -48,7 +48,7 @@ const Services = () => {
           </p>
         </div>
         {/* 2nd */}
-        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white">
+        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white" data-aos="fade-up" data-aos-duration="2000">
           <p className="text-[#aa8453] text-6xl">
             <TbWorldShare></TbWorldShare>
           </p>
@@ -59,7 +59,7 @@ const Services = () => {
           </p>
         </div>
         {/* 3rd */}
-        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white">
+        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white" data-aos="fade-up" data-aos-duration="2000">
           <p className="text-[#aa8453] text-6xl">
             <LiaWifiSolid></LiaWifiSolid>
           </p>
@@ -70,7 +70,7 @@ const Services = () => {
           </p>
         </div>
         {/* 4th */}
-        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white">
+        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white" data-aos="fade-down" data-aos-duration="2000">
           <p className="text-[#aa8453] text-6xl">
             <MdOutlineDinnerDining></MdOutlineDinnerDining>
           </p>
@@ -81,7 +81,7 @@ const Services = () => {
           </p>
         </div>
         {/* 5th */}
-        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white">
+        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white" data-aos="fade-down" data-aos-duration="2000">
           <p className="text-[#aa8453] text-6xl">
             <LiaSwimmingPoolSolid></LiaSwimmingPoolSolid>
           </p>
@@ -92,7 +92,7 @@ const Services = () => {
           </p>
         </div>
         {/* 5th */}
-        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white">
+        <div className="text-center items-center flex flex-col border py-3 px-5 space-y-3 border-[#f1d0a6a6] hover:bg-[#212529] hover:text-white" data-aos="fade-down" data-aos-duration="2000">
           <p className="text-[#aa8453] text-6xl">
             <BiCar></BiCar>
           </p>

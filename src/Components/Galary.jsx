@@ -14,7 +14,7 @@ const ImageGallery = () => {
   return (
     <div className="w-11/12 mx-auto h-80 overflow-hidden relative">
       {/* text section */}
-      <div className="text-center ">
+      <div className="text-center " data-aos="fade-right" data-aos-duration="3000">
         <div className="flex gap-3 justify-center">
           <img
             className="h-fit mt-2 lg:block md:hidden hidden"

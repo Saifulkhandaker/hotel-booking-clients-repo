@@ -7,7 +7,7 @@ const Offers = () => {
     <div className="w-11/12 mx-auto py-10">
       <div className="mb-8">
         {/* text section */}
-        <div className="text-center ">
+        <div className="text-center " data-aos="fade-down" data-aos-duration="2000">
           <div className="flex gap-3 justify-center">
             <img
               className="h-fit mt-2 lg:block md:hidden hidden"
@@ -31,7 +31,7 @@ const Offers = () => {
       {/* offers section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {/* 1st */}
-        <div className="border border-slate-200 hover:bg-slate-700 rounded-xl">
+        <div className="border border-slate-200 hover:bg-slate-700 rounded-xl" data-aos="fade-down" data-aos-duration="2000">
           <img className="h-72 w-full" src={offers3} alt="" />
           <div className="mt-3 px-4 text-center py-5 ">
             <h3 className="text-2xl font-serif text-[#aa8453] hover:text-white">"Guest Package"</h3>
@@ -42,7 +42,7 @@ const Offers = () => {
           </div>
         </div>
         {/* 2nd */}
-        <div className="border border-slate-200 hover:bg-slate-700 rounded-xl">
+        <div className="border border-slate-200 hover:bg-slate-700 rounded-xl" data-aos="fade-up" data-aos-duration="2000">
           <img className="h-72 w-full" src={offers4} alt="" />
           <div className="mt-3 px-4 text-center py-5">
             <h3 className="text-2xl font-serif text-[#aa8453] hover:text-white">"First Booking"</h3>
@@ -53,8 +53,8 @@ const Offers = () => {
             </p>
           </div>
         </div>
-        {/* 1st */}
-        <div className="border border-slate-200 hover:bg-slate-700 rounded-xl">
+        {/* 3rd */}
+        <div className="border border-slate-200 hover:bg-slate-700 rounded-xl" data-aos="fade-down" data-aos-duration="2000"  >
           <img className="h-72 w-full" src={offers3} alt="" />
           <div className="mt-3 px-4 text-center py-5">
             <h3 className="text-2xl font-serif text-[#aa8453] hover:text-white">"Weekdays Offer"</h3>

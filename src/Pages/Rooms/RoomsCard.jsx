@@ -4,7 +4,7 @@ const RoomsCard = ({ room }) => {
   const {_id, room_title, banner_img, price } = room;
 
   return (
-    <div className="group relative h-full w-full border-2 border-[#f1d0a6a6] px-4 py-3">
+    <div className="group relative h-full w-full border-2 border-[#f1d0a6a6] px-4 py-3" data-aos="fade-up-right" data-aos-duration="2000">
   <img
     className="h-full w-full transform scale-100 group-hover:scale-110 transition-transform duration-300"
     src={banner_img}

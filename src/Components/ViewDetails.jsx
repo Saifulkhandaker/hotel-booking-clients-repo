@@ -85,7 +85,7 @@ const ViewDetails = () => {
   return (
     <div>
       {/* rooms bg and title */}
-      <div className="relative">
+      <div className="relative" data-aos="fade-top" data-aos-duration="2000">
         <img className="md:h-[70vh] w-full" src={roomBg} alt="" />
         <div className="text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
           <h1 className="text-xs md:text-2xl lg:text-4xl">
@@ -106,7 +106,7 @@ const ViewDetails = () => {
           {/* descriptions side */}
           <div className="col-span-2">
             {/* images */}
-            <div>
+            <div data-aos="zoom-in-down" data-aos-duration="2000">
               <img className="w-full" src={banner_img} alt="" />
               <div className="flex gap-[6px] md:gap-16 lg:gap-[2px] mt-2">
                 <img className="w-48 lg:w-fit h-fit" src={img1} alt="" />
@@ -119,7 +119,7 @@ const ViewDetails = () => {
               </div>
             </div>
             {/* description */}
-            <div className="mt-10 space-y-5">
+            <div className="mt-10 space-y-5" data-aos="zoom-in-up" data-aos-duration="2000">
               <h1 className="text-3xl md:text-5xl text-center lg:text-left font-serif text-[#222222]">
                 Description Of
                 <span className="text-[#AA8453]">_{room_title}</span>
@@ -146,7 +146,7 @@ const ViewDetails = () => {
               <p className="text-xl text-justify ">{description}</p>
             </div>
             {/* facilities */}
-            <div className="mt-10 space-y-5">
+            <div className="mt-10 space-y-5" data-aos="zoom-in-up" data-aos-duration="2000">
               <h1 className="text-3xl text-center lg:text-left md:text-5xl font-serif text-[#222222]">
                 Room Facilites
               </h1>
@@ -197,7 +197,7 @@ const ViewDetails = () => {
             </div>
           </div>
           {/* form submit side */}
-          <div>
+          <div data-aos="fade-left" data-aos-duration="2000">
             <form
               onSubmit={handleRoomBook}
               className="card-body bg-[#F5F6F7] border  rounded-lg py-20 px-10 space-y-5"

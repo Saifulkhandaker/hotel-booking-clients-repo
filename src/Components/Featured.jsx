@@ -10,7 +10,7 @@ const Featured = () => {
     <div className="w-11/12 mx-auto">
       <div className="mt-10 mb-10 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 justify-center items-center">
         {/* img section */}
-        <div className="relative ml-0 lg:ml-0 md:ml-28">
+        <div className="relative ml-0 lg:ml-0 md:ml-28" data-aos="fade-right" data-aos-duration="2000">
           <img src={featured1} alt="" />
           <img
             className="absolute -bottom-10 border-8 border-white right-10 md:left-20 lg:left-64"
@@ -19,7 +19,7 @@ const Featured = () => {
           />
         </div>
         {/* content section */}
-        <div className="space-y-3 md:space-y-8 lg:text-left text-center">
+        <div className="space-y-3 md:space-y-8 lg:text-left text-center" data-aos="fade-left" data-aos-duration="2000">
           <div className="flex gap-3">
             <p className="text-[#898989] ml-20 md:ml-48 lg:ml-0 text-sm md:text-xl font-medium mt-16 lg:mt-0">
               H O E X R _ L U X U R Y _ H O T E L

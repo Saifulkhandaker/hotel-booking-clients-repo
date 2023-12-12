@@ -12,7 +12,7 @@ const AboutUs = () => {
   return (
     <div>
         {/* banner section */}
-      <div className="relative">
+      <div className="relative" data-aos="fade-top" data-aos-duration="2000">
         <img className="md:h-[70vh] w-full" src={roomBg} alt="" />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-4xl font-serif text-white">
         A B O U T _ H O E X R <br />
@@ -33,11 +33,11 @@ const AboutUs = () => {
       {/* hospitality section */}
       <div className="w-11/12 mx-auto mt-10 mb-20 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center">
         {/* img */}
-        <div>
+        <div data-aos="fade-right" data-aos-duration="2000">
             <img className="lg:h-[100vh] md:w-full lg:mt-5 " src={img} alt="" />
         </div>
         {/* content section */}
-        <div className="space-y-3 md:space-y-8 lg:text-left text-center">
+        <div className="space-y-3 md:space-y-8 lg:text-left text-center" data-aos="fade-left" data-aos-duration="2000">
         <div className="flex gap-3">
             <p className="text-[#898989] ml-20 md:ml-48 lg:ml-0 text-sm md:text-xl font-medium mt-8 lg:mt-0">
               E A T _ F R O M _ T H E _ L A N D
@@ -57,7 +57,7 @@ const AboutUs = () => {
           {/* img section */}
           <div className="md:flex justify-between gap-5">
             {/* 1st */}
-            <div className="space-y-2 ">
+            <div className="space-y-2 " data-aos="fade-up" data-aos-duration="2000">
                 <h3 className="text-3xl font-serif text-left ">Restaurant</h3>
                 <ul className="space-y-2">
                     <li className="text-lg flex text-center items-center gap-3"><span className="text-[#AA8453]"><AiOutlineFileDone></AiOutlineFileDone></span> Healty Food</li>
@@ -67,7 +67,7 @@ const AboutUs = () => {
                 <img src={hospitality1} alt="" />
             </div>
             {/* 1st */}
-            <div className="space-y-2">
+            <div className="space-y-2" data-aos="fade-up" data-aos-duration="2000">
                 <h3 className="text-3xl font-serif text-left ">SPA & Wellness</h3>
                 <ul className="space-y-2">
                     <li className="text-lg flex text-center items-center gap-3"><span className="text-[#AA8453]"><AiOutlineFileDone></AiOutlineFileDone></span> Healty Food</li>

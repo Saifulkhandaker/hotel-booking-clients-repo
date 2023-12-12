@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="relative">
         <img src={banner} className=" w-full  md:h-[90vh]" />
 
-        <div className="text-white text-center absolute bottom-5 left-[75px] md:bottom-14 md:left-10 lg:bottom-40 lg:left-80 ">
+        <div className="text-white text-center absolute bottom-5 left-[75px] md:bottom-14 md:left-10 lg:bottom-40 lg:left-80 " data-aos="zoom-in-up" data-aos-duration="2000">
           <p className=" font-medium text-xs uppercase md:text-xl italic mb-2 md:mb-4">
             "unique place and luxury hotel"
           </p>

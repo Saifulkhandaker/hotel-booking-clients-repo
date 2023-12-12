@@ -3,6 +3,7 @@ import { PiSwimmingPoolDuotone, PiCallBellLight } from "react-icons/pi";
 import featured1 from "../assets/images/featured/featured1.jpg";
 import featured2 from "../assets/images/featured/featured2.jpg";
 import smallIcon from "../assets/icons/small icon.png";
+import { Link } from "react-router-dom";
 
 const Featured = () => {
   return (
@@ -57,9 +58,11 @@ const Featured = () => {
           </div>
           <div className="flex ml-8 gap-5 md:gap-16 lg:ml-9 md:ml-24">
             <div className="md:mt-0 mt-2">
+              <Link to="/aboutUs">
               <button className="mt-2 md:mt-6 uppercase hover:bg-black border bg-[#AA8453] text-white text-sm md:text-lg px-3 py-2 md:px-10 md:py-4 rounded-sm">
                 Discover More
               </button>
+              </Link>
             </div>
             <div className="flex items-center gap-3 lg:mt-4 md:mt-5">
               <p className="text-[#898989] text-xs md:text-xl font-serif">

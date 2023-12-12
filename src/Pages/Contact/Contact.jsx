@@ -4,7 +4,6 @@ import smallIcon from "../../assets/icons/small icon.png";
 import { BsTelephonePlus } from "react-icons/bs";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { TiLocationArrowOutline } from "react-icons/ti";
-import map from "../../assets/images/rooms/London-street-map-detail-with-road-casings.png"
 
 const Contact = () => {
   return (
@@ -113,8 +112,13 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div>
-        <img className="w-[90%] mx-auto h-[85vh] mb-10" src={map} alt="" />
+      <div className="w-11/12 mx-auto mb-16 border-2 border-[#AA8453]">
+      <iframe className="w-full h-[300px] md:h-[400px] "
+  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6726.337103163644!2d-0.06860155763503091!3d51.40018012533551!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1702371046901!5m2!1sen!2sbd"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+></iframe>
       </div>
     </div>
   );

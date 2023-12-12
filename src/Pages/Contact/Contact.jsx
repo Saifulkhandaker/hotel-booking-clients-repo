@@ -4,8 +4,28 @@ import smallIcon from "../../assets/icons/small icon.png";
 import { BsTelephonePlus } from "react-icons/bs";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { TiLocationArrowOutline } from "react-icons/ti";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+import { useRef } from "react";
 
 const Contact = () => {
+
+  const formRef = useRef();
+
+  const handlemessage = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      position: "top-center",
+      icon: "success",
+      title: "Message Sent Successfully..!",
+      showConfirmButton: false,
+      timer: 1500
+    });
+    
+     // Reset the form
+     formRef.current.reset();
+  }
+
   return (
     <div>
       {/* room bg */}
@@ -37,44 +57,51 @@ const Contact = () => {
           <h2 className="text-3xl md:text-5xl font-serif">
             Feel free to write
           </h2>
-          <div className="flex gap-5">
-            <input
-              type="text"
-              placeholder="Enter Name"
-              className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
-            />
-            <input
-              type="email"
-              placeholder="Enter Email"
-              className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
-            />
-          </div>
-          <div className="flex gap-5 mt-5">
-            <input
-              type="text"
-              placeholder="Enter Subject"
-              className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
-            />
-            <input
-              type="text"
-              placeholder="Enter Phone"
-              className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
-            />
-          </div>
-          <div className="mt-5">
-            <textarea
-              className="bg-[#F4F5F8] w-full px-10 py-7"
-              placeholder="Enter Message"
-              name=""
-              id=""
-              rows="5"
-            ></textarea>
-          </div>
-          <div className="mt-4">
-            <button className="hover:bg-[#AA8453] hover:text-white py-4 px-5 border rounded-none text-[#AA8453] bg-[#F4F5F8] border-[#AA8453]">
-              Send Message
-            </button>
-          </div>
+          <form onSubmit={handlemessage} ref={formRef}>
+              <div className="flex gap-5">
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Name"
+                  className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
+                />
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter Email"
+                  className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
+                />
+              </div>
+              <div className="flex gap-5 mt-5">
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Subject"
+                  className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
+                />
+                <input
+                  type="number"
+                  placeholder="Enter Phone"
+                  required
+                  className=" w-full bg-[#F4F5F8] px-10 py-7 input  rounded-none"
+                />
+              </div>
+              <div className="mt-5">
+                <textarea
+                  required
+                  className="bg-[#F4F5F8] w-full px-10 py-7"
+                  placeholder="Enter Message"
+                  name=""
+                  id=""
+                  rows="5"
+                ></textarea>
+              </div>
+              <div className="mt-4">
+                <button className="hover:bg-[#AA8453] hover:text-white py-4 px-5 border rounded-none text-[#AA8453] bg-[#F4F5F8] border-[#AA8453]">
+                  Send Message
+                </button>
+              </div>
+          </form>
         </div>
         {/* content */}
         <div className="space-y-3">
@@ -112,13 +139,14 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      {/* map */}
       <div className="w-11/12 mx-auto mb-16 border-2 border-[#AA8453]">
-      <iframe className="w-full h-[300px] md:h-[400px] "
-  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6726.337103163644!2d-0.06860155763503091!3d51.40018012533551!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1702371046901!5m2!1sen!2sbd"
-  style={{ border: 0 }}
-  allowFullScreen=""
-  loading="lazy"
-></iframe>
+          <iframe className="w-full h-[300px] md:h-[400px] "
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6726.337103163644!2d-0.06860155763503091!3d51.40018012533551!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1702371046901!5m2!1sen!2sbd"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+        ></iframe>
       </div>
     </div>
   );

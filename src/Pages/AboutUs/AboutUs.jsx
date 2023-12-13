@@ -10,7 +10,7 @@ import { AiOutlineFileDone } from "react-icons/ai";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
         {/* banner section */}
       <div className="relative" data-aos="fade-top" data-aos-duration="2000">
         <img className="md:h-[70vh] w-full" src={roomBg} alt="" />

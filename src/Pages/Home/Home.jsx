@@ -10,7 +10,7 @@ import Galary from "../../Components/Galary";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Banner></Banner>
       <Featured></Featured>
       <Imagery></Imagery>

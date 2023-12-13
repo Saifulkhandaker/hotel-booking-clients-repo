@@ -83,7 +83,7 @@ const ViewDetails = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* rooms bg and title */}
       <div className="relative" data-aos="fade-top" data-aos-duration="2000">
         <img className="md:h-[70vh] w-full" src={roomBg} alt="" />
